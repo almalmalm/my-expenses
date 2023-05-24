@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -10,7 +12,9 @@
   },
   "dependencies": {
     "@next/font": "13.4.3",
+    "@supabase/supabase-js": "^2.22.0",
     "next": "13.4.3",
+    "prisma": "^4.14.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }
