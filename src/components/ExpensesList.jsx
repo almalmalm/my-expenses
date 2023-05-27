@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import ExpenseCard from './ExpenseCard';
-import styles from '../styles/Home.module.css';
 import { getExpenses } from '@/pages/api/expenses';
 import { useUser } from '../../hooks/useUser.js';
 import { supabase } from '../../lib/supabase';
@@ -29,7 +28,7 @@ export default function ExpenseList() {
   return (
     <div>
       <h2>Expense List</h2>
-      <div className={styles['expense-list']}>
+      <div>
         {expenses.map((expense) => (
           <ExpenseCard key={expense.id} expense={expense} />
         ))}
