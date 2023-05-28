@@ -55,7 +55,7 @@ export default function Home() {
               <div className="flex flex-col gap-8">
                 <div className="flex justify-center">
                   <h1 className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md">
-                    My expenses
+                    Your expenses
                   </h1>
                 </div>
                 <div className="flex justify-center">
