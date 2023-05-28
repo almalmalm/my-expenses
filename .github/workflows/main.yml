@@ -1,4 +1,4 @@
-name: Trigger Tests
+name: Integration Tests
 
 on:
   push:
@@ -6,15 +6,22 @@ on:
       - main
 
 jobs:
-  trigger-tests:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Tests Workflow
+      - name: Checkout my-expenses
+        uses: actions/checkout@v2
+
+      - name: Checkout my-expenses-tests
+        uses: actions/checkout@v2
+        with:
+          repository: almalmalm/my-expenses-tests
+          ref: main
+          path: tests
+
+      - name: Run Cypress tests
         run: |
-          curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.TESTS_REPOSITORY_PAT }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Content-Type: application/json" \
-            -d '{"event_type": "workflow_dispatch"}' \
-            "https://api.github.com/repos/almalmalm/my-expenses-tests/dispatches"
+          cd tests
+          npm install
+          npm run test
