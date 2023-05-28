@@ -16,4 +16,4 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.TESTS_REPOSITORY_PAT }}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/almalmalm/my-expenses-tests/dispatches" \
-            -d '{"event_type": "cypress-run"}'
+            -d '{"event_type": "workflow_dispatch"}'
