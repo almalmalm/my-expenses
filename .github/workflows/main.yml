@@ -18,10 +18,7 @@ jobs:
         with:
           repository: almalmalm/my-expenses-tests
           ref: main
-          path: tests
 
       - name: Run Cypress tests
         run: |
-          cd tests
-          npm install
-          npm run test
+          npm start
