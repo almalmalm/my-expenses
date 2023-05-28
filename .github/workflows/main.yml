@@ -21,4 +21,5 @@ jobs:
 
       - name: Run Cypress tests
         run: |
+          npm install
           npm start
