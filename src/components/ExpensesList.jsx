@@ -27,7 +27,7 @@ export default function ExpenseList() {
 
   return (
     <div>
-      <h2>Expense List</h2>
+      <h2>Expenses</h2>
       <div>
         {expenses.map((expense) => (
           <ExpenseCard key={expense.id} expense={expense} />

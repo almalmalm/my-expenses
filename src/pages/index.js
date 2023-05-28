@@ -81,11 +81,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={inika.className}>
-        <ExpensesList />
-        <h3>Create new expenses</h3>
-        <CreateExpensePage />
-        <div>{user.email}</div>
-        <button onClick={handleSignout}>Logout</button>
+        <div className="bg-gradient-to-br from-cyan-500 to-blue-500 w-screen h-screen">
+          <div className="mx-16 flex flex-col gap-32">
+            <ExpensesList />
+            <h3>Create new expenses</h3>
+            <CreateExpensePage />
+            <div>
+              <div>{user.email}</div>
+              <button onClick={handleSignout}>Logout</button>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
