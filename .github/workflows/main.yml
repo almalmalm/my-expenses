@@ -28,12 +28,12 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
       - name: Checkout my-expenses
         uses: actions/checkout@v3
       - name: Checkout my-expenses-tests
         uses: actions/checkout@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
         with:
           repository: almalmalm/my-expenses-tests
           ref: main
