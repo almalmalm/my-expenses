@@ -8,17 +8,37 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      QASE_API_TOKEN: ${{ secrets.QASE_API_TOKEN }}
 
     steps:
+#       - name: Checkout my-expenses
+#         uses: actions/checkout@v3
+
+#       - name: Checkout my-expenses-tests
+#         uses: actions/checkout@v3
+#         with:
+#           repository: almalmalm/my-expenses-tests
+#           ref: main
+
+#       - name: Run Cypress tests
+#         run: |
+#           npm install
+#           npm test
+
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
       - name: Checkout my-expenses
         uses: actions/checkout@v3
-
       - name: Checkout my-expenses-tests
         uses: actions/checkout@v3
         with:
           repository: almalmalm/my-expenses-tests
           ref: main
-
+#           start: npm test
+          browser: chrome
       - name: Run Cypress tests
         run: |
           npm install
