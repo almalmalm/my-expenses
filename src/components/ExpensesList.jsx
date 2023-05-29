@@ -26,8 +26,12 @@ export default function ExpenseList() {
   }, [user]);
 
   return (
-    <div>
-      <h2>Expenses</h2>
+    <div className="mt-8">
+      <div className="flex justify-center">
+        <h2 className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md">
+          Expenses
+        </h2>
+      </div>
       <div>
         {expenses.map((expense) => (
           <ExpenseCard key={expense.id} expense={expense} />

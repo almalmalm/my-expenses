@@ -84,7 +84,11 @@ export default function Home() {
         <div className="bg-gradient-to-br from-cyan-500 to-blue-500 w-screen h-screen">
           <div className="mx-16 flex flex-col gap-32">
             <ExpensesList />
-            <h3>Create new expenses</h3>
+            <div className="flex justify-center">
+              <h2 className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md">
+                Create new expenses
+              </h2>
+            </div>
             <CreateExpensePage />
             <div>
               <div>{user.email}</div>
