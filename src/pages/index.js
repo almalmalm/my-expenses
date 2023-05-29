@@ -60,7 +60,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-center">
                   <p className="text-xl bg-amber-100 rounded-md inline-block p-2">
-                    You can track you money expenses, view monthly statistics
+                    You can track your money expenses, view monthly statistics
                     and more.
                   </p>
                 </div>
