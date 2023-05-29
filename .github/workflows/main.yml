@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout my-expenses
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Checkout my-expenses-tests
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: almalmalm/my-expenses-tests
           ref: main
@@ -22,4 +22,4 @@ jobs:
       - name: Run Cypress tests
         run: |
           npm install
-          npm start
+          npm test
