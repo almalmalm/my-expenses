@@ -52,14 +52,20 @@ export default function Home() {
                   </button>
                 </Link>
               </div>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-8" data-test="information">
                 <div className="flex justify-center">
-                  <h1 className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md">
+                  <h1
+                    className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md"
+                    data-test="title"
+                  >
                     My expenses
                   </h1>
                 </div>
                 <div className="flex justify-center">
-                  <p className="text-xl bg-amber-100 rounded-md inline-block p-2">
+                  <p
+                    className="text-xl bg-amber-100 rounded-md inline-block p-2"
+                    data-test="description"
+                  >
                     You can track your money expenses, view monthly statistics
                     and more.
                   </p>
