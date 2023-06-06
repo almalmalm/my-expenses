@@ -27,12 +27,12 @@ export default function ExpenseList() {
 
   return (
     <div className="mt-8">
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-8">
         <h2 className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md">
           Expenses
         </h2>
       </div>
-      <div>
+      <div className="flex flex-col gap-2 items-center">
         {expenses.map((expense) => (
           <ExpenseCard key={expense.id} expense={expense} />
         ))}
