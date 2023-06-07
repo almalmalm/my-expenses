@@ -88,17 +88,22 @@ export default function Home() {
       </Head>
       <main className={inika.className}>
         <div className="bg-gradient-to-br from-cyan-500 to-blue-500 w-screen h-screen">
-          <div className="mx-16 flex flex-col gap-32">
+          <div className="mx-16 flex flex-col">
             <ExpensesList />
-            <div className="flex justify-center">
+            <div className="flex justify-center my-8">
               <h2 className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md">
                 Create new expenses
               </h2>
             </div>
             <CreateExpensePage />
-            <div>
-              <div>{user.email}</div>
-              <button onClick={handleSignout}>Logout</button>
+            <div className="flex flex-col gap-2 absolute bottom-8 left-16">
+              <div className="bg-zinc-200 p-2 rounded w-fit">{user.email}</div>
+              <button
+                onClick={handleSignout}
+                className="bg-orange-300 p-2 rounded w-fit"
+              >
+                Logout
+              </button>
             </div>
           </div>
         </div>

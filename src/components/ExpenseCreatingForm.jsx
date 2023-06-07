@@ -7,7 +7,7 @@ export default function CreateExpensePage() {
   const { user } = useUser();
 
   const [description, setDescription] = useState('');
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState('');
   const [category_id, setCategory_id] = useState('');
 
   // Add other expense fields as needed
@@ -29,7 +29,7 @@ export default function CreateExpensePage() {
         const createdExpense = await createExpense(expenseData, user_id);
 
         console.log('Expense created:', createdExpense);
-        setAmount(0);
+        setAmount('');
         setDescription('');
       }
       // Redirect or perform additional actions upon successful creation
@@ -39,22 +39,24 @@ export default function CreateExpensePage() {
   };
 
   return (
-    <div>
-      <h1>Create Expense</h1>
-      <form onSubmit={handleCreateExpense}>
+    <div className="flex justify-center">
+      <form onSubmit={handleCreateExpense} className="flex gap-2">
         <input
+          className="p-2 rounded"
           type="text"
           placeholder="Title"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
         <input
+          className="p-2 rounded"
           type="number"
           placeholder="Amount"
           value={amount}
           onChange={(e) => setAmount(parseInt(e.target.value))}
         />
         <select
+          className="p-2 rounded"
           value={category_id}
           onChange={(e) => setCategory_id(e.target.value)}
           required
@@ -65,7 +67,9 @@ export default function CreateExpensePage() {
           {/* Add more options as needed */}
         </select>
         {/* Add other input fields for expense data */}
-        <button type="submit">Create Expense</button>
+        <button type="submit" className="p-2 rounded bg-teal-100">
+          Create Expense
+        </button>
       </form>
     </div>
   );

@@ -32,10 +32,12 @@ export default function ExpenseList() {
           Expenses
         </h2>
       </div>
-      <div className="flex flex-col gap-2 items-center">
-        {expenses.map((expense) => (
-          <ExpenseCard key={expense.id} expense={expense} />
-        ))}
+      <div className="flex justify-center">
+        <div className="flex flex-col gap-2">
+          {expenses.map((expense) => (
+            <ExpenseCard key={expense.id} expense={expense} />
+          ))}
+        </div>
       </div>
     </div>
   );
