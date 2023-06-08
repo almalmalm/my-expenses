@@ -63,7 +63,7 @@ export default function CreateExpensePage() {
         >
           <option value="">Select Category</option>
           <option value="1">Food</option>
-          <option value="Entertainment">Entertainment</option>
+          <option value="4">Entertainment</option>
           {/* Add more options as needed */}
         </select>
         {/* Add other input fields for expense data */}
