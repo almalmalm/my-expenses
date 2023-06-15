@@ -54,7 +54,7 @@ export default function Home() {
                     className="bg-teal-100 p-2 rounded-md"
                     data-test="sign-up"
                   >
-                    Sign up!
+                    Sign up
                   </button>
                 </Link>
               </div>
