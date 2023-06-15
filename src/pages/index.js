@@ -42,12 +42,18 @@ export default function Home() {
             <div className="mx-16 flex flex-col gap-32">
               <div className="flex justify-end gap-8 text-base my-8">
                 <Link href="/login">
-                  <button className="bg-teal-100 p-2 rounded-md">
+                  <button
+                    className="bg-teal-100 p-2 rounded-md"
+                    data-test="sign-in"
+                  >
                     Sign in
                   </button>
                 </Link>
                 <Link href="/registration">
-                  <button className="bg-teal-100 p-2 rounded-md">
+                  <button
+                    className="bg-teal-100 p-2 rounded-md"
+                    data-test="sign-up"
+                  >
                     Sign up
                   </button>
                 </Link>
