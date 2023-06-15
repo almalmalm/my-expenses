@@ -53,14 +53,14 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex flex-col gap-8" data-test="information">
-                <div className="flex justify-center">
+                {/* <div className="flex justify-center">
                   <h1
                     className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md"
                     data-test="title"
                   >
                     My expenses
                   </h1>
-                </div>
+                </div> */}
                 <div className="flex justify-center">
                   <p
                     className="text-xl bg-amber-100 rounded-md inline-block p-2"
@@ -69,6 +69,14 @@ export default function Home() {
                     You can track your money expenses, view monthly statistics
                     and more.
                   </p>
+                </div>
+                <div className="flex justify-center">
+                  <h1
+                    className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md"
+                    data-test="title"
+                  >
+                    My expenses
+                  </h1>
                 </div>
               </div>
             </div>
