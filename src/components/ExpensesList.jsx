@@ -36,7 +36,7 @@ export default function ExpenseList() {
         </h1>
       </div>
       <div className="flex justify-center">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2" data-test="list">
           {expenses.map((expense) => (
             <ExpenseCard key={expense.id} expense={expense} />
           ))}
@@ -44,4 +44,5 @@ export default function ExpenseList() {
       </div>
     </div>
   );
+  s;
 }
