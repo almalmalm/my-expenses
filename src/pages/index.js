@@ -103,7 +103,12 @@ export default function Home() {
             </div>
             <CreateExpensePage />
             <div className="flex flex-col gap-2 absolute bottom-8 left-16">
-              <div className="bg-zinc-200 p-2 rounded w-fit">{user.email}</div>
+              <div
+                className="bg-zinc-200 p-2 rounded w-fit"
+                data-test="user-email"
+              >
+                {user.email}
+              </div>
               <button
                 onClick={handleSignout}
                 className="bg-orange-300 p-2 rounded w-fit"

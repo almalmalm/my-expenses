@@ -28,7 +28,10 @@ export default function ExpenseList() {
   return (
     <div className="mt-8">
       <div className="flex justify-center mb-8">
-        <h1 className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md">
+        <h1
+          className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md"
+          data-test="title-account-page"
+        >
           Expenses
         </h1>
       </div>
