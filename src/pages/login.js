@@ -44,7 +44,7 @@ export default function Login() {
             <div className="flex justify-center">
               <h1
                 className="text-2xl uppercase bg-emerald-100 inline-block p-2 rounded-md"
-                data-test="loginPageTitle"
+                data-test="title-login-page"
               >
                 Login Page
               </h1>
